@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" charset="ie=edge">
+  <title>Document</title>
+  <style>
+    .eyes{
+      width: 480px;
+      margin: auto;
+    }
+    .eye{
+      width: 200px;
+      height: 200px;
+      border: 5px solid black;
+      border-radius: 100px;
+      position: relative;
+    } /* 포지션 릴레이티브를 설정해주지 않으면 화면기준으로 위치가 잡힌다.*/
+    .eye:nth-child(1){ float: left;}
+    .eye:nth-child(2){ float: right;}
+
+    .ball{
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      border-radius: 25px;
+      position: absolute;
+      top: 80px;
+      left: 30px;
+
+      animation-name: moving;
+      animation-duration: 2s;
+      animation-delay: 0s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; /*인피니트 무한반복*/ 
+      animation-direction: alternate; /* nomal 정방향 reverse 역방향 alternate 왔다갔다 */
+      
+
+     /* animation: moving 2s 0s linear infinite alternate ; 
+        앞에 숫자가 듀레이션 뒤에 숫자가 딜레이 
+        단축으로 이렇게 써도 실행되는데 문제없음 */
+    }
+
+    .ball:hover{/*running 움직인다 paused 멈춘다*/
+      animation-play-state: paused;
+    }
+    @keyframes moving {
+      from{ left: 30px; }
+      to{ left: 120px; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="eyes">
+    <div class="eye">
+      <div class="ball"></div>
+    </div>
+    <div class="eye">
+      <div class="ball"></div>
+    </div> 
+  </div>
+  
+</body>
+</html>

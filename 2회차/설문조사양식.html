@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE-edge">
+  <title> 설문조사 페이지 </title>
+</head>
+<body>
+  <header>
+    <h1>설문조사 양식</h1>
+    <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+  </header>
+  <hr>
+  <main>
+    <form>
+      <fieldset>
+        <legend>개인정보</legend>
+          <label for="name">이름</label>
+          <input type="text" name="name" id="name"
+                 placeholder="이름을 입력해 주세요"/>
+          <br>
+          <label>이메일</label>
+          <input type="text" name="email" id="email"
+                 placeholder="메일 주소를 입력해 주세요"/>
+      </fieldset>
+      <fieldset>
+        <legend>설문</legend>
+         <p>연령대가 어떻게 되십니까?</p>
+          <input type="radio" id="teen" name="age" value="10">
+          <label for="teen">10대</label>
+          <input type="radio" id="twenty" name="age" value="20">
+          <label for="twenty">20대</label>
+          <input type="radio" id="thirty" name="age" value="30">
+          <label for="thirty">30대</label>
+          <input type="radio" id="fourty" name="age" value="40">
+          <label for="fourty">40대</label>
+          <input type="radio" id="fifty" name="age" value="50">
+          <label for="fifty">50대</label>
+          <input type="radio" id="other" name="age" value="other">
+          <label for="other">그외</label>
+
+         <p>어떤 일을 하고 계신가요?</p>
+          <input type="radio" id="student" name="job" value="student">
+          <label fot="student">학생</label>
+          <input type="radio" id="soldier" name="job" value="soldier">
+          <label for="soldier">군인</label>
+          <input type="radio" id="worker" name="job" value="worker">
+          <label for="worker">직장인</label>
+          <input type="radio" id="self-employed" name="job" value="self-employed">
+          <label for="self-employed">자영업</label>
+
+         <p>어떤 MBTI를 가지고 계신가요? 해당되는 4개를 선택해주세요</p>
+          <input type="checkbox" id="e" name="mbti" value="e">
+          <label for="e">E</label>
+          <input type="checkbox" id="i" name="mbti" value="i">
+          <label for="i">I</label>
+          <br>
+          <input type="checkbox" id="s" name="mbti" value="s">
+          <label for="s">S</label>
+          <input type="checkbox" id="n" name="mbti" value="n">
+          <label for="n">N</label>
+          <br>
+          <input type="checkbox" id="f" name="mbti" value="f">
+          <label for="f">F</label>
+          <input type="checkbox" id="t" name="mbti" value="t">
+          <label for="t">T</label>
+          <br>
+          <input type="checkbox" id="p" name="mbti" value="p">
+          <label for="p">P</label>
+          <input type="checkbox" id="j" name="mbti" value="j">
+          <label for="j">J</label>
+      </fieldset>
+      <fieldset>
+        <legend>기타의견</legend>
+        <textarea rows="3" cols="30" name="comment"></textarea>
+      </fieldset>
+      <input type="submit">
+    </form>
+  </main>
+  <hr>
+  <footer>
+    <p>입력하느라 수고하셨습니다.</p>
+  </footer>
+</body>
+</html>
+<!--만들고자 하는 페이지의 구조를 먼저 파악 후 뼈대를 먼저 작성하기-->

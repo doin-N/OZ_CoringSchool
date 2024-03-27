@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>양식을 만들고 입력 정보를 보내자</title>
+  </head>
+  <body>
+    <header>
+      <h1>설문조사 양식</h1>
+      <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    </header>
+    <hr/>
+    <main>
+      <form>
+        <fieldset >
+          <!--원래는 action 과 method 가 들어가야함(서버없음)-->
+          <legend>개인정보</legend>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name"
+                   placeholder="본명을 입력하세요"> 
+            <br>
+            <label for="email">이메일주소</label>
+            <input type="text" name="email" id="email" 
+                   placeholder="이메일을 입력하세요">
+        </fieldset>
+
+        <fieldset> <!--네모칸으로 묶은것-->
+          <legend>설문</legend>
+          
+          <p>연령대가 어떻게 되십니까?</p>
+          <!--라디오 버튼은 보기중 하나만 고를 수 있는데 처음에 여러개 체크가능
+              입력요소 name 이 같아야지 하나가됨(name중요함 어디든 붙여야함)-->
+          <input type="radio" id="teen" name="age">
+          <label for="teen">10</label>
+          <input type="radio" id="twenty" name="age">
+          <label for="twenty">20</label>
+          <input type="radio" id="thirty" name="age">
+          <label for="thirty">30</label>
+          <input type="radio" id="fourty" name="age">
+          <label for="fourty">40</label>
+          <input type="radio" id="fifty" name="age">
+          <label for="fifty">50</label>
+          <input type="radio" id="other" name="age">
+          <label for="other">그외</label>
+
+          <p>학원 선택 시 기준은? 모두 고르시오.</p>
+          <input type="checkbox" id="position" name="academy">
+          <label for="position">위치</label>
+          <input type="checkbox" id="price" name="academy">
+          <label for="price">학원비</label>
+          <input type="checkbox" id="teacher" name="academy">
+          <label for="teacher">강사</label>
+          <input type="checkbox" id="inrfa" name="academy">
+          <label for="inrfa">시설</label>
+
+        </fieldset>
+        <fieldset>
+          <legend>기타 의견</legend>
+          <textarea rows="3" cols="30" name="comment"></textarea>
+        </fieldset>
+        <input type="submit" width="">
+      </form>
+    </main>
+  <hr/>
+    <footer>
+      <p>입력하느라 수고하셨습니다.</p>
+    </footer>
+  </body>
+</html>

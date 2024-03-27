@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" charset="IE=edge">
+  <title>글꼴을 꾸며보자</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+  <style>
+    *{
+      font-family: "Nanum Gothic Coding", monospace;
+    }
+
+    html{
+      font-size: 8px;
+    }
+    
+    body{
+      font-size: 32px;
+    }
+
+    #first{ /* em자기를 포함한 부모태그 폰트사이즈에 곱한다
+               rem 루트=문서의 시작 html 의 폰트사이즈에 곱한다
+            */
+      font-size: 3rem;
+      font-weight: 100; /*글자두께 100(가장얆음)~900(가장두꺼움) 사이에서 정함*/
+      line-height: 50px; /*행높이로 텍스트간의 줄간격*/
+      text-align: justify; /*justify 양끝정렬 글자가 양끝으로 붙는다*/
+    }
+    
+  </style>
+</head>
+<body>
+  <p id="first">에스프레소와 물을 섞으면 아메리카노가 됩니다.</p>
+  <p>에스프레소와 물을 섞으면 아메리가노가 됩니다.</p>
+</body>
+</html>

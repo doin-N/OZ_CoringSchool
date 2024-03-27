@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" charset="IE=edge">
+  <title>선택자 더 알아보기</title>
+  <style> 
+    [width $= "0"]{ /*[]속성선택자,특정속성이있는
+              기호와 함께 사용하는속성 선택자
+              * : 값의 포함 "값"
+              ^ : 값의 시작
+              $ : 값의 끝              
+             */
+      border: 5px dashed red;
+    }
+    p > em{/*중첩단계는 띄움이 ~에 들어있는이란 뜻 하위요소
+              자식요소선택은 > 
+            */
+      color: blue;
+    }
+    #sam ~ p{/*인접형제 성택자 + 내바로 뒤에있는 형제를 선택한다
+               전체형제 선택자 ~ 내모든 형제를 선택한다
+             */
+      color: orange;
+    }
+    /* 형제선택시 유의사항
+       뒤이어 등장하는 형제들에게만 효과가 적용된다.
+    */
+  </style>
+</head>
+<body>
+  <img src="images/양이.JPG" width="120" alt="고양이">
+  <img src="images/양이.JPG" width="120">
+  <img src="images/양이.JPG" width="120" id="sam">
+  <p>고양이는 <em>귀여움</em>의 대명사이며, 집을 벗어나는걸 싫어한다</p>
+  <p>자신이 주인의 주인이라 착각하며 살고있으며 </p>
+  <p>주인또한 자신을 집사라 자처하며 수발을 든다</p>
+  <p>가끔 알수없는 행동을 하지만 그 행동이 귀염움을 배로 느껴지게한다.</p>
+  
+</body>
+</html>

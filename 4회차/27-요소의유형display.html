@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>요소의 유형</title>
+  <style>
+    p{
+      display: inline;
+    }
+    /* 디스플레이가 인라인인 요소의 경우 
+       width나 height로 크기를 정할수 없다
+       블록레벨 요소는 콘텐츠 영역을 설정하면 
+       너비를 차지하기 위해 마진을 확장한다.*/
+    /* inline-block을 통해 옆으로 이어지는 콘텐츠를 만들수있다. */
+    /* none는 화면상에 안보임 */
+    
+    span{
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <p>경제</p>
+  <p>정치</p>
+  <p>과학</p>
+  <p>생활</p>
+  <span>하하</span>
+</body>
+</html>

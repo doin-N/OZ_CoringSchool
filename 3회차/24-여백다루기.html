@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE-edge">
+  <title>여백 다루기</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      
+      margin: 10px 20px 30px 40px;
+      /* 접미사 지정으로 여백을 원하는 부분만 할수 있음
+         top bottom left right*/
+      padding-top: 20px;
+      padding-right: 50px;
+
+      box-sizing: content-box;
+      /* content-box 순수한 콘텍츠 영역을 지켜준다. 대신 요소 사이즈가 커짐
+      border-box 정해진 사이즈 안에 포함됨 */
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

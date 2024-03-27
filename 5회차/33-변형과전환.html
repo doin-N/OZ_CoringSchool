@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" charset="ie=edge">
+  <title>변형과 전환</title>
+  <style>
+    .parent{
+      display: inline-block;
+      margin: 0 20px;
+    }
+    .child{
+      width: 150px;
+      height: 150px;
+      background-color: teal;
+    }
+    
+    .parent:nth-child(1) > .child{transform: translate(30px, 50px);}
+    .parent:nth-child(2) > .child/*확대축소*/{transform: scale(1.2, 0.8);}
+    .parent:nth-child(3) > .child/*비틀기*/{transform: skew(45deg);}
+    .parent:nth-child(4) > .child/*회전*/{transform: rotate(45deg);}
+    
+
+    .parent:nth-child(5) > .child:hover{
+      width: 300px;
+      height: 300px;
+      background-color: orange;
+      transition-property: width;
+      transition-duration: 5s;
+      transition-delay: 2s;
+      transition-timing-function: ease-in;
+    }
+    /* ease 점점속도가 빨라지다가 끝날때 다시 느려진다
+       linear 처음부터 끝까지 같은속도
+       ease-in 느리게 시작했다가 점점빨라짐
+       ease-out 빠르게 시작했다가 점점 느려짐 
+    */   
+    .parent:nth-child(6) > .child:hover{
+      width: 300px;
+      height: 300px;
+      background-color: orange;
+      transition: background-color 2s 0s linear,
+      height 2s 0s linear;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+  
+</body>
+</html>

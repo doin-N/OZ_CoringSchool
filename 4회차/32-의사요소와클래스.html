@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" charset="IE=edge">
+  <title>의사요소와 클래스</title>
+  <style>
+    .menu{
+      padding: 10px;
+      border-bottom: 1px solid black;
+    }
+    .menu > li{
+      display: inline-block;
+      text-align: center;
+    }
+    li > a{
+      display: inline-block;
+      width: 80px;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    a:hover{/*마우스 얹어있을때 효과*/
+      color: white;
+      background-color: gray;
+    }
+
+    a:active{/*마우스를 누르고 있을때 효과*/
+      color: white;
+      background-color: black;
+    }
+    li:nth-child(n){/*n 모든수가선택된다.
+                      2n 짝수만 서택
+                      2n-1 홀수만 선택
+                    */
+      font-size: 20px;
+    }
+
+    /*a::의사요소 중 after(앞),befor(뒤)) 추가설명
+      앞이나 뒤에 콘텐츠 내용을 추가 할 수 있다.
+    */
+    a::after{
+      content: "보기";
+      color: blue;
+    }
+
+
+  </style>
+</head>
+<body>
+  <ul class="menu"> <!--갈 주소가 없으면 #같은거 써놓으세요-->
+    <li><a href="#">사전</a></li>
+    <li><a href="#">뉴스</a></li>
+    <li><a href="#">증권</a></li>
+    <li><a href="#">지도</a></li>
+  </ul>
+</body>
+</html>

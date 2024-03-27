@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>양식 만들고 입력 정보 보내기</title>
+  </head>
+  <body>
+    <form action="none.com" method="">
+    
+      <!--form은(블록레벨) 입력요소를 모아주는 역활 입력 받고싶은 것들로 채우면됨
+      서버가 있다면 해당 서버로 관련 데이터를 모아서 보내주는 역활-->
+      <!--폼에 필요한 3가지 
+        1. action 정보를 보낼 서버
+        2. method get서버로부터 데이터 가져오는 요청, post보낸 정보를 서버에서 어떻게 했음 좋겠다 요구
+        3. submit 폼의 입력값을 보낸다.-->
+
+      <lavel for="name">이름</lavel>
+      <input id="name" type="text" name="name">
+      <!--id 만든 웹페이지 안에서의 식별자
+        name 서버에서의 식별자
+        이 요소의 입력값을 서버에서 처리할때 이 이름으로 처리하세요
+        값은 타입의 입력값을 서버에서 구별하기 위해 사용
+        양식을 만들때는 각각의 네임을 만들어 줘야 함-->
+      <br>
+      <lavel for="age">나이</lavel>
+      <input id="age" type="number" name="name">
+      <br>
+      <lavel for="character">성격</lavel>
+      <textarea id="character" name="name"></textarea>
+      <br>
+      <input type="submit">
+      <!--3.여기-->
+    </form>
+  </body>
+</html>       

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>겹치거나 넘치는 요소 다루기</title>
+  <style>
+    /*z인덱스는 높은값일수록 위쪽에 배치됨*/
+    /*css의 overflow 넘칠때 쓸수있는 현상*/
+    div{
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+    .div1{ /*hidden 넘치는거 숨겨라 
+             scroll 넘치는거 스크롤로 보여줘라
+             auto 알아서 처리해줘라
+           */
+      background-color: orange; 
+      z-index: 99;
+      overflow: auto;
+    }
+    .div2{ background-color: red; bottom: 50px; z-index: 88;}
+    .div3{ background-color: purple; bottom: 100px; z-index: 77;}
+    .div4{ background-color: green; bottom: 150px; z-index: 11;}
+
+  </style>
+</head>
+<body>
+  <div class="div1">
+    오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지
+    오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지
+    오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지
+    오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지
+    오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지
+  </div>
+  <div class="div2">2</div>
+  <div class="div3">3</div>
+  <div class="div4">4</div>
+</body>
+</html>

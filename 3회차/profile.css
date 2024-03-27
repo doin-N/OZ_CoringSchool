@@ -1,0 +1,68 @@
+
+*{
+  font-family: "Sunflower", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+html{
+  background-color: rgba(50%,50%,100%,20%);
+}
+body{
+  width: 1050px;
+  /*블록레벨은 특성상 너비를 모두 차지해서 
+    width가 콘텐츠 영역을 줄인만큼 마진을 늘린다는 특성이 있음
+    그래서 가운데 정렬을 하기위해서 마진:오토 라는 스타일을 적용 
+  */
+  margin: auto; /* 어떤상황에도 가운데 정렬 유지 
+                    너비에서 남는여백을 동일하게 분배한다는 결과를 나타냄
+                */
+  font-size: 1.0rem;
+  line-height:28px;              
+              }
+h1{
+  font-size: 70px;
+}
+img{
+  width: 450px;
+  border-radius: 5px 150px 150px 50px;
+}
+#title{
+  margin-top: 50px;
+}
+#doin{
+  padding-top: 85px;
+}
+#nodo{
+  color: purple;
+  font-weight: 900;
+}
+#curiosity{
+  color: red;
+  font-weight: 500;
+}
+#society{
+  color: darkorange;
+}
+#new{
+  color: green;
+}
+#movie{
+  color: rgb(10%, 50%, 70%)
+}
+#tension{
+  text-decoration: underline;
+  font-weight: 500;
+}
+#mbti{
+  font-weight: 500;
+}
+#refer{
+  font-weight: 500;
+  text-align: left;
+  padding-left: 490px;
+}
+p#body{
+  text-align: left;
+  padding-left: 490px;
+}
+ 

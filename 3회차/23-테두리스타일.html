@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE-edge">
+  <title>테두리 스타일</title>
+  <style>
+    .area{
+      width: 200px;
+      height: 100px;
+    }
+
+    .red{
+      border-width: 5px;
+      border-style: solid;
+      /* solid 직선 dotted 점선 dashed 긴점선 double 두겹테두리 */
+      border-color: red;
+    }    
+
+    .green{
+      /* 단축속성은 공백으로 속성값을 서로 구분! */
+      border: 3px solid green;
+
+      border-radius: 0px 20px 30px 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>숲 - 최유리</h2>
+  <p class="red">난 저기 숲이 돼볼게</p>
+  <p class="area green">너는 자그맣기만 한 언덕 위를</p>
+
+  
+</body>
+</html>

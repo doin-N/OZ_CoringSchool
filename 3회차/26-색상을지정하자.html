@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>색상을 지정하자</title>
+  <!--
+    색상함수 
+    rgb (r값, g값, b값) 빛의 3원색이라 전부 100퍼일때는 밝아짐
+    rgba (r값, g값, b값, 투명도값) 투명도 추가지정 가능
+    색조 채도 조도 함수
+    hsl (h값, s값, ㅣ값)
+    hsla (h값, s값, ㅣ값, 투명도값) 투명도 추가지정 가능
+    # 색상지정시 여섯자리 16진수 값 입력 #rrggbb #ggrrbbaa
+    
+  -->
+  <style>
+    p#one{
+      color: rgb(0%, 50%, 0%);
+      opacity: 0.5; /*투명도를 따로조절할수 있는 명령어*/
+    }
+    p#two{
+      color: rgba(0%, 50%, 0%, 0.5);
+    }
+    p#three{
+      color: hsla(300, 100%, 30%, 0.3);
+    }
+    p#four{
+      /* 0~9까지 표현하는 체계 10진수 
+         ABCEDF 의 알파벳을 추가하여 표현이 16진수 < 여기까지 한자리수
+         00~FF : FF=255
+      */
+      color: #ff00ff99;
+
+    }
+
+  </style>
+</head>
+<body>
+  <p id="one">고소한 아몬드와 함께 여는 아침</p>
+  <p id="two">고소한 아몬드와 함께 여는 아침</p>
+  <p id="three">고소한 아몬드와 함께 여는 아침</p>
+  <p id="four">고소한 아몬드와 함께 여는 아침</p>
+</body>
+</html>
