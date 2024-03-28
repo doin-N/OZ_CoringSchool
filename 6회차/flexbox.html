@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="Ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플렉스박스 레이아웃</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+    
+    }
+    ul{
+      display: flex; /*플렉스는 가로방향으로 진행하겠다*/
+      padding: 0;
+      list-style-type: none;
+      height: 200px;
+      
+      /* justify-content: space-between
+        플렉스 컨테이너 안의 아이템들을 주축에서 어떤식으로 배치될것인가.
+         기본이 왼쪽>오른쪽 
+         남은 여백에 배치해서 구조를 바꾸는법
+         flex-start.ene 가운데는 그냥 center
+         사이사이에 투입 space-between 양끝정렬 후 사이사이에 공백
+         -around 개별아이템이 가지는 여백을 양옆에 똑같이 맞추어 배치
+         -evenly 모든여백을 똑같이 맞춘다.
+      */
+     
+      align-items: center;
+      /* 교차축에서 어떤식으로 배치할 것인가
+         stretch 기본값 플렉스 컨테이너 높이에 맞춰서 길이가 형성되어 있음
+         flex-start.end 
+      */
+    
+
+      /* flex-direction: row;
+      주축을 어디로 하겟나 row기본 -reverse 붙히면 오른쪽에서 왼쪽
+        column세로축으로 주축변경
+
+      플렉스는 1차원적으로 한방향으로만 진행하기에 화면크기가 줄면 자식을 찌그러트림
+        이러한 속성을 바꾸는게 -wrap
+        no wrap 기본값 wrap 공간이 부족하면 아래로 내려감
+
+      flex-wrap: nowrap;
+      한꺼번에 지정할수 있는 단축어 -flow
+      flex-flow: row wrap; */
+    }
+    /* li:nth-child(3){
+      align-self: flex-start;
+      } 아이템입장에서 내가 어떻게 배치할지 결정하는것 
+    */
+
+    li{
+      background-color: tomato;
+    }
+    li:nth-child(2n){
+      background-color: teal;
+    }
+    li:nth-child(2){
+      flex-grow: 1;
+    }
+    /*flex-grow 공간이 남으면 내가 더 가져가겠다. 상대적으로
+      -shrink 공간이 부족할때 내가 더 축소 될 것이다.
+    */
+    li:nth-child(4){
+      flex-grow: 1;
+    }
+    li:nth-child(2n-1){
+      flex: 1 1 120px;
+    }
+    /*flex-basis: 100px;
+      플렉스는 콘텐츠 크기만큼의 크기를 가진다는게 기본
+      -basis 을 주면 초기값을 가지고 배치를 진행할수 있다.
+    */
+    /*flex는 단축어 grow shrink basis 를 한꺼번에 쓸수있다.*/
+
+  </style>
+</head>
+<body>
+
+  <h2>유노코딩이 집앞 강가에서 목격한 동물들</h2>
+  <ul>
+    <li>물오리</li>
+    <li>물까치</li>
+    <li>고라니</li>
+    <li>누룩뱀</li>
+    <li>너구리</li>
+  </ul>
+  
+</body>
+</html>

@@ -40,7 +40,16 @@
       height: 300px;
       background-color: orange;
       transition: background-color 2s 0s linear,
-      height 2s 0s linear;
+      width 2s 0s linear;
+    }
+    .parent:nth-child(7) > .child{
+      position: relative;
+      right: -400px;
+      width: 100px;
+      transition: width 2s 0s ease-in-out;
+    }
+    .parent:nth-child(7) > .child:hover{
+      right: 0;
     }
 
   </style>
