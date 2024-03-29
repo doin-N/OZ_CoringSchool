@@ -1,0 +1,56 @@
+.chat-screen_texts{
+  padding: 0;
+  list-style-type: none;
+}
+
+.chat-screen_texts > .text{
+  background-color: white;
+  width: 270px;
+  height: 50px;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 30px;
+  position: relative;
+  left: 20px
+}
+
+
+/* 말풍선 꼬리 */
+.chat-screen_texts > .left::after{
+  content: ""; /*""으로 빈박스 만들수있음 */
+  border-right: 16px solid white; 
+  border-bottom: 16px solid transparent;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+}
+
+.chat-screen_texts > .right::after{
+  content: "";
+  border-left: 16px solid white;
+  border-bottom: 16px solid transparent;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+}
+/* transparent투명하게 바꿀수 있음
+   의사요소로 추가하는법 ::after
+*/
+
+/* 말풍선 효과*/
+.chat-screen_texts > .text:hover{
+  background-color: #EAEAEA ;
+  transition: background-color 1500ms 200ms ease-in;
+  
+}
+.chat-screen_texts > .left:hover::after{
+  border-right: 16px solid #EAEAEA;
+  transition: border-right 1500ms 200ms ease-in;
+}
+.chat-screen_texts > .right:hover::after{
+  border-left: 16px solid #EAEAEA;
+  transition: border-left 1500ms 200ms ease-in;
+}
+/* 과제 문제해결 유도
+말풍선 많아져도 문제가 없게끔 페이지를 수정해라*/
