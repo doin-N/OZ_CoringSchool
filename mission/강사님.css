@@ -1,0 +1,67 @@
+*{/*처음에 마진 패딩이 있기때문에 없애고 시작하면 사이즈 정하기 좋음*/
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+.container{
+  display: flex;/* */
+  flex-direction: column;
+  height: 100vh;/*vh는 화면상의라는 뜻*/
+  width: 100vw;
+  background-color: white;
+}
+/**/
+header{/*기본이 블록요소라 너비 쓸필요없음*/
+  height: 100px;
+  background-color: white;/*grow남은 여백을 다 가져간다.*/
+  flex-grow: 1;
+  display: flex;
+}
+.user-img{
+  width: 80px;
+  height: 80px;
+  background-color: gray;
+  border-radius: 10px;
+}
+.user-info{
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  padding: 10px
+}
+main{
+  flex-grow: 1;
+  background-color: cornflowerblue;
+}
+.chat-list{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* 왼쪽에 붙혔는데 */
+
+}
+.chat{
+  background-color: gold;
+  padding: 10px;
+
+
+}
+li{
+  background-color: gold;
+  padding:10px;
+  margin:30px;
+}
+
+form{
+  height: 120px;
+  background-color: skyblue;
+  display: flex;
+}
+textarea{
+  flex-grow: 1;
+  resize: none;
+}
+button{
+  height: 120px;
+  width: 120px;
+}
