@@ -1,4 +1,4 @@
-head.header{
+header.header{
   position: fixed; /* 포지션 고정 */
   top: 0; /* 맨위에 */
   width: 100%; /* 너비는 화면전체 */
