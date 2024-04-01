@@ -1,6 +1,7 @@
 .chat-screen_texts{
-  padding: 0;
+  padding: 0 0 1303px 0;
   list-style-type: none;
+  z-index: 77;
 }
 
 .chat-screen_texts > .left{
@@ -17,7 +18,7 @@
   너비가 넘어가면 글자가 말풍에 안맞춰짐 
   그래서 widht 를 최대값만 지정 후 height를 지움으로 해결함
   */
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   padding: 10px;
   border-radius: 8px;
   line-height: 30px;
@@ -35,7 +36,7 @@
   background-color: white;
   max-width: 370px;
   /* height: 50px; */
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   padding: 10px;
   border-radius: 8px;
   line-height: 30px;
