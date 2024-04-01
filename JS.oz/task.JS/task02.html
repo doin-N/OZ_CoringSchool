@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1 id="name"></h1>
+  <p id="animal"></p>
+  <p id="fruit"></p>
+
+  <script>
+    const nameinput = document.querySelector("#name")
+    let name = prompt("당신의 이름은 무엇입니까?")
+    nameinput.textContent = name
+
+    const animalinput = document.querySelector("#animal")
+    let animal = prompt("당신이 가장 좋아하는 동물은 무엇입니까?")
+    animalinput.textContent = animal
+
+    const fruitinput = document.querySelector("#fruit")
+    let fruit = prompt("가장 좋아하는 과일은 무엇입니까?")
+    fruitinput.textContent = fruit
+
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자 정보 입력받고 출력하기</title>
+</head>
+<body>
+  <h1 id="name"></h1>
+  <p id="hobby"></p>
+  <p id="song"></p>
+
+  <script>
+    const nameElement = document.querySelector("#name")
+    //아이디가 네임이 요소를 네임엘리먼트라는 이름을 주겠다.
+    let name = prompt("당신의 이름은?")
+    // 사용자에게 이름을 받을 건데 네임이라는 변수를 주겠다.
+    nameElement.textContent =name
+    //네임을 텍스트 컨텐츠에 대입하겠다.
+
+    const hobbyElement = document.querySelector("#hobby")
+    let hobby = prompt("당신의 취미는?")
+    hobbyElement.textContent =`취미는 ${hobby} 입니다.`
+
+    const songElement = document.querySelector("#song")
+    .textContent = `좋아하는 곡은 ${prompt("좋아하는 곡은?")}입니다!`
+    
+
+  </script>
+</body>
+</html>
