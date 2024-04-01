@@ -4,21 +4,37 @@
 }
 
 .chat-screen_texts > .left{
-  background-color: yellow;
-  width: 270px;
-  height: 50px;
+  float : left; /*왼쪽정렬 float를 맨밑에 적음 미적용으로 맨위로 옮기니 적용됨*/
+  clear: both; /* 애들이 가로로 뭉쳐있어서 세로로 내려가게 만듬*/
+  background-color: white;
+  max-width: 370px;
+  /* height: 50px; */ 
+  /*
+  말풍선 크기를 글자수에 맞춰서 하고 싶은데 계속 설정이 안됏음
+  width랑 height를 설정해 놓으면 설정된 크기가 있어서 글자에 말풍선이 안맞춰짐
+  그래서 widht 를 max width 로 설정한후 height를 지움으로 해결함
+  채팅에 글자수가 다 다른데 너비랑 높이를 지정해버리면 
+  너비가 넘어가면 글자가 말풍에 안맞춰짐 
+  그래서 widht 를 최대값만 지정 후 height를 지움으로 해결함
+  */
   margin: 0 0 10px 0;
   padding: 10px;
   border-radius: 8px;
   line-height: 30px;
   position: relative;
-  left: 20px
+  left: 20px;
+  
+  
 }
 
 .chat-screen_texts > .right{
+  float: right;
+  clear: both;
+  float : right;
+  clear:both;
   background-color: white;
-  width: 270px;
-  height: 50px;
+  max-width: 370px;
+  /* height: 50px; */
   margin: 0 0 10px 0;
   padding: 10px;
   border-radius: 8px;
