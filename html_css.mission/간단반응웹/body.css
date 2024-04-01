@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+section{ /* flex 개념 확실히 알아야 할듯 중요중요중요중요 */
+  display: flex; 
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  align-items: center;/* 세로방향 가운데정렬 */
+  justify-content: center; /* 가로방향 가운데 정렬 */
+}
+div{
+  display: none;
+}
+
+@media screen and (max-width: 1800px){
+  section{
+    background-color: #D1B2FF;
+  }
+  section .pc{
+    display: block;
+  }
+}
+@media screen and (max-width: 1500px){
+  section{
+    background-color: #B2CCFF;
+  }
+  section .pc{
+     display: none;
+  }
+  section .note{
+    display: block;
+  }
+}
+@media screen and (max-width: 1000px){
+  section{
+    background-color: #B7F0B1;
+  }
+  section .note{
+     display: none;
+  }
+  section .ipad{
+    display: block;
+  }
+}
+@media screen and (max-width: 720px){
+  section{
+    background-color: #FAED7D;
+    color: black;
+  }
+  section .ipad{
+     display: none;
+  }
+  section .height{
+    display: block;
+  }
+}
+@media screen and (max-width: 500px){
+  section{
+    background-color: #FFA7A7;
+    color: white;
+  }
+  section .height{
+     display: none;
+  }
+  section .tablet{
+    display: block;
+  }
+}
