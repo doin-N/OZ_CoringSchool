@@ -1,0 +1,61 @@
+
+/* 공통 수정 부분 */
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+.flex{
+  display: flex;
+  justify-content: flex-start
+}
+
+/* 메뉴 리스트 */
+nav ul li{
+  
+  padding:10px 20px;
+  font-size:20px;
+  list-style-type: none;
+}
+.menu_nav {
+  position: fixed;
+  top: 0;
+  margin: 5px;
+  border-radius: 10px;
+  max-width: 99%;
+  z-index: 999;
+  background-color: black;
+  color: white;
+}
+.home{
+  background-color: #FFA7A7;
+  border-radius: 10px;
+  max-width: 10%;
+  font-weight: 500;
+  
+}
+/* 메뉴버튼 */
+.icon_menu_bugger input{
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  .menu_nav {
+    background-color: white;
+  }
+  nav ul li{ 
+    display: none;
+  }
+  .icon_menu_bugger input{
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+  }
+
+}
