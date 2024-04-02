@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 매소드 및 속성</title>
+</head>
+<body>
+  
+
+  <h1 id="song-title" class="heading text"
+  title="vos의 2019년 발매곡">
+    <span>다시 만날까 봐</span>
+  </h1>
+  <p class="lyrics">
+    인스타로 몰래 보는 너의 하루들 누가 봐도 헤어진 티를 내
+  </p>
+  <p class="lyrics">
+    팔로우 다 끊고서 좋아요는 왜 눌렀니 (ㅋㅋ)
+  </p>
+  <script>
+    //선택자 메소드들
+    console.log(document.querySelectorAll(".lyrics"))
+    //querySelector 같은 클라스 요소가 2개일 때 그 중 1번째 요소만 선택한다는 특징이 있다.
+    //All은 같은 요소가 전부 선택된다.
+    console.log(document.getElementsByClassName("lyrics"))
+    //오로지 클래스 값,이름으로만 선택한다. 그래서 클래스 표시 할 필요 없음
+
+    const title = document.getElementById("song-title")
+    console.log(title)
+    //오로지 아이디 이름으로만 선택한다. html에서 아이디는 고유한 식별자로 사용되는 값
+
+    //속성
+    console.log(title.textContent)//공백을 포함
+    console.log(title.innerText)//공백을 미포함
+
+    console.log(title.className)
+    console.log(title.style)
+    console.log(title.title)
+  </script>
+</body>
+</html>
