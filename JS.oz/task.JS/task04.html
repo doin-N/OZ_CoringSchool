@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 4-1 아래 코드는 구구단 2단을 출력하는 코드입니다.
+// for 반복문으로 바꿔 보세요.
+/* let num = 2;
+console.log(`${num} x 1 = ${num * 1}`);
+console.log(`${num} x 2 = ${num * 2}`);
+console.log(`${num} x 3 = ${num * 3}`);
+console.log(`${num} x 4 = ${num * 4}`);
+console.log(`${num} x 5 = ${num * 5}`);
+console.log(`${num} x 6 = ${num * 6}`);
+console.log(`${num} x 7 = ${num * 7}`);
+console.log(`${num} x 8 = ${num * 8}`);
+console.log(`${num} x 9 = ${num * 9}`);
+
+console.log('여기서부터는 반복문을 사용해서 구현한 코드입니다.');
+// 조건1. 위 코드와 같은 결과가 나와야 합니다.
+// 조건2. for 반복문을 사용해야 합니다.
+for (i = 1; i < 10; i++){
+  console.log(`${num} x ${i} = ${(i*2)}`)
+} */
+
+
+// 4-2 결과를 확인하고 싶으면 터미널에 node test2.js를 입력하세요.
+// for 반복문으로 문자열의 짝수 번째 요소를 출력하는 코드를 작성하세요.
+/*let str = ' 이 것 은 반 복 문 을 위 한 테 스 트 입 니 다';
+// for 반복문으로 문자열의 짝수 번째 요소를 출력하는 코드를 작성하세요.
+for (let i = 1; i <= str.length; i += 2) {
+  console.log(str[i]);
+}*/
+// let i = 0 으로 설정시 띄어쓰기만 뜸 
+// i < str.length 와 i <= str.length 의 결과 값 같음
+// i+2 적용시 무한으로 찾아짐 서버다운
+
+
+// 4-3 결과를 확인하고 싶으면 터미널에 node test3.js를 입력하세요.
+// 1부터 10까지의 모든 숫자의 합을 구하는 코드를 작성하세요.
+// while 반복문으로 구현해야 합니다.
+/* let result = 0;
+for(let num =1; num <= 10; num++){
+   console.log(`${num}+${result}=${result+num}`)
+}*/
+/*let num = 1;
+let result = 0;
+while (num <= 10) {
+  result = (num++)+result;
+}
+console.log(result);*/
+//while문 안에 콘솔을 넣으면 더하는 모든 과정이 콘솔창에서 보이고
+//밖에 적으면 결과 값만 출력됨
+//(num++) 괄호안에 안넣어도 결과값 출력됨
+
+
+
+// 4-4 결과를 확인하고 싶으면 터미널에 node test2.js를 입력하세요.
+// for 반복문으로 문자열의 짝수 번째 요소를 출력하는 코드를 작성하세요.
+/* let str = ' 이 것 은 반 복 문 을 위 한 테 스 트 입 니 다';
+for (let i = 1; i <= str.length; i += 2) {
+  console.log(str[i]);
+}
+*/
+//let num = 1;
+//let result = 0;
+/* while (num <= 10) {
+  result = result + num;
+  num++;
+}
+console.log(result); */
+
+
+// 4-5 결과를 확인하고 싶으면 터미널에 node test5.js를 입력하세요.
+// 다음 while문과 동일한 결과를 출력하는 for문을 작성하세요.
+/* let str = 'ozcoding school'; //주어진 문자열
+let num = 0; //'o'의 갯수를 주적하는 변수
+for (let i = 0; i <= str.length; i++) { //i는 0부터 str문자열의 끝까지 1씩 늘어난다
+  if (str[i] === 'o') { //만약 str의 조건식에 o가 있다면
+    num++; //num의 값을 1씩 늘린다.
+  }
+}
+console.log(num); */
+
+// while문을 작성하세요.
+let str = 'ozcoding school'; 
+let num = 0; 
+let i = 0;
+
+while ( i < str.length) {
+  if (str[i] ==='o'){ 
+  num++;}
+ i++
+}
+console.log(num)
+
+
+    </script>
+</body>
+</html>

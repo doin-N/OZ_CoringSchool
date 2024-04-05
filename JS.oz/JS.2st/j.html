@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!--정해져있을땐 for (초기식;조건식;반복식) {반복할 코드}
+  초기식 : 첫 작업의 번호 
+  조건식 : 얼마나 반복할지 조건쓰기
+  반복식 : 작업을 반복할때 번호를 몇씩 올릴지 작석하자
+
+  정해져있지 않을때 while (조건식) {반복할 코드}
+
+  while (상자가 비어있지 않을때){
+  사과를 하나 꺼낸다
+  총개수+=1 }-->
+
+  <script>
+
+
+// 1.출석체크하기 
+
+/*const 출석뷰 = ['철수', '영희', '진수', '미애', '수지', '은우', '고은', '도현', '지민', '지수']
+const 교실 = 출석부.filter(()=> Math.random() < 0.7)
+console.log(교실)
+
+let 출석인원 = 0
+
+for (let 번호 = 1; 번호 <= 10; 번호 ++){
+  console.log(`교수님: ${번호}번 ${출석부[번호 - 1]} 학생 왔나요?`)
+
+  if (교실.includes( 출석부[번호 -1])) {
+    console.log(`${출석부[번호})
+  }
+}
+
+console.log(`교수님: 오늘은 ${출석인원}명 왔네~`)*/
+
+// 사과 갯수 세보기
+
+/*let 사과박스 = new Array(Math.floor(Math.random()*100)).fill('사과')
+const 정답 = 사과박스.length
+let 개수 = 0
+
+while (사과박스.length ! == 0 ){
+  사과박스.pop()
+  개수 += 1
+}
+
+console.log('사과는 ' + 개수 + '개 있었어!)
+console.log(정답 === 개수 ? '맙게 자 ㄹ세었네!' : '잘못셌네...')*/
+
+
+
+/*let sum = 0 // 1~n까지 늘어나면서 반복문을 작성하겠다.
+let n = 3
+for (let i = 1; 1<= n; i++){
+  sum += i
+} */
+
+//console.log(sum)
+//includes특정배열 찾을때
+//모음개수새기 
+
+const 모음 = ['a', 'i', 'u', 'e', 'o']
+let 단어 = 'Hello World'  //3개  문자열도 배열식으로 0부터 가져올수있다.
+
+console.log(단어[1]) //단어의 [몇번째] 인덱스
+
+//[0,1,2,3,4] 이 배열의 길이는 5 문자열이나 배열의 length의 직전까지 다본다.설정
+for (let i = 0; i < 단어.length; i++){
+  if(모음.includes(단어[i]) ) {
+    모음개수++
+  }
+}
+console.log(모음개수)
+
+  </script>
+  
+</body>
+</html>
