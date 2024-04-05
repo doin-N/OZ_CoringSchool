@@ -16,27 +16,35 @@
     //몬스터의 데미지와 제목 정하기
     let monsterHP = 100 //몬스터의 에너지 결정하기
     const container = document.getElementById("container") 
-   
-    const h1 = document.createElement("h1") 
-    h1.textContent = "몬스터 잡기 게임을 시작합니다!" 
-    container.appendChild(h1)
+    /* hp에 대한 정보를 계속적으로 표시한 컨테이너태그를 선택하는데 
+    컨테이너라는 이름을 가진 상수를 만들어 아이디값과 상수명을 의도적으로 똑같이 만듬 */
+    const h1 = document.createElement("h1") // 시작할때 뜰 문구 h1으로 만들어서
+    h1.textContent = "몬스터 잡기 게임을 시작합니다!" //시작시 문구 뜨게하기
+    container.appendChild(h1) // 만든 h1을 컨테이너에 추가하기
 
     //let attackDamage = prompt("1회 공격시 데미지는? (양의 정수)")
     // 데미지 정해서 사용자가 데미지를 입력하면 그정보를 받을 수 있게 만들것이다.
+    // 프롬프트는 사용자에게 값을 입력 받아서 반환을 하는데 특징이 문자열를 받는다는것
+    // 근데 몬스터 HP는 숫자이고 입력 받은 데미지는 문자열이기 때문에 서로 자료형이 안맞는 문제가 생김
+    // 이럴때 사용자가 입력한 문자를 숫자열로 바꿔주는 변수 parseInt를 사용하면 됨
+
     let attackDamage = parseInt(prompt("1회 공격시 데미지는? (양의정수)"))
     let attackCount = 0
 
     //양의 정수를 입력해야 데미지를 깎을수 있는데 한글 영어 -1같은 숫자를 입력하면 문제가 생긴다.
     //그래서 데미지를 입력했다는 전제 하에 또다른 조건을 건다.
+    //양의 정수를 입력하면 게임을 시작하고 아니라면 게임을 취소하는 조건
+
     if( attackDamage > 0 ) { //어텍데미지가 0보다 크면 괜찮기 때문에 게임을 시작한다.
       while(monsterHP > 0 ){
         monsterHP -= attackDamage// HP가 감소한다!!
         attackCount += 1 // 때리니 횟수는 증가한다!!
 
-        
+        // 위의 내용을 계속적으로 화면에 표시해줘야한다.
+        // 때리는 횟수를 증가할때마다 텍스트가 하나씩 추가되야함
         const p = document.createElement("p")
-        p.textContent = `몬스터를 ${attackCount}회 공격했다!` 
-        container.append(p)
+        p.textContent = `몬스터를 ${attackCount}회 공격했다!` //요소를 생성해준다.
+        container.append(p)//내용을 화면에 출력
 
         const strong = document.createElement("strong")
         strong.textContent = `몬스터의 남은 HP는 ${monsterHP} 입니다!`
@@ -58,6 +66,7 @@
       h2.style.color = "orange"
       h2.title = "게임을 다시 시작하고 싶으면 새로고침하세요"
       container.appendChild(h2)
+
 
     }else{
       alert("데미지를 잘못 입력하여 게임을 취소합니다!") // 그렇지 않다면 경고창을 띄운후 게임을 취소한다

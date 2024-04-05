@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    for(let a=1; a<=5; a +=1 ){
+    const div = document.getElementById("container")
+    //겟 엘리먼트 일단 태그 만들어서 간직하고 있기
+  
+    const box = document.createElement("div")
+    console.log(box)
+    box.style.color = "blue"
+    box.style.width = "200px"
+    box.style.height = "200px"
+    box.textContent = "헷갈리지만 신기하고 재미있다!"
+
+    div.append(box)
+  }
+    //fot 문으로 반복 가능
+    //append와 child의 차이 
+    //append 는 Html 뿐아니라 단순 텍스트 문자도 입력가능,콘솔 반환 불가 
+    //차이들는 텍스트 추가 안됨 추가하고 나서 반환도 해줌 콘솔에 나옴
+
+
+
+    
+  </script>
+</body>
+</html>
