@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 핸들링</title>
+</head>
+<body>
+
+  <button id="span">SPAN</button>
+  <button id="strong">STRONG</button>
+  <button id="mark">MARK</button>
+  <hr>
+
+  <script>
+    //각각의 버튼을 누를 때 마다 버튼에 쓰여있는 해당 태그를 생성하게 구현하자
+    //1.먼저는 구현한 버튼을 먼저 선택한다.
+    const spanBtn = document.getElementById("span");
+    const strongBtn = document.getElementById("strong");
+    const markBtn = document.getElementById("mark");
+
+    //2.이벤트 속성 꺼내기 버튼은 클릭이된다. 버튼이 눌렸을 때 무언가 이루어지길 원한다 이때 이벤트 속성 사용
+    //무언가를 했을때 속성 on , 일반적으로 function 표현식 사용 대, onclick(클릭했을때 ) {}에 정의된 일이 벌어짐
+    //표현식은 좋은점이 이름을 안써줘도 함수의 기능을 표현 가능해서 좋음
+
+    // 스판버튼이 눌렸을때 스판테그가 실제로 화면에 표시, 생겼으면 좋겠다.
+    /*spanBtn.onclick = function(){
+      const span = document.createElement("span")
+      span.textContent = "새로 생긴 span 태그입니다."
+      document.body.append(span)//바디에 추가한다.
+    }*/
+
+    //위의 결과와 똑같지만 다른방법 V
+    //다른 이벤트 속성 addEventListener 메소드 웹요소들이 다 가지고 있는 메소드 이벤트 핸들러를 등록하는역화
+    //인수가 최소 2개 들어가면 된다. 처음 이벤트 이름 그 뒤에 함수
+    /*spanBtn.addEventListener("click",function(){
+      const span = document.createElement("span")
+      span.textContent = "새로 생긴 span 태그입니다."
+      document.body.append(span)//바디에 추가한다.
+    })*/
+
+
+
+    //이벤트 객체를 사용해서 좀 더 똑똑하게 처리하는 방법
+    //클릭처럼 스트롱 마크 버튼에도 클릭시 요소를 추가 하고 싶다. 스트롱은 스트롱 마크는 마크로 다 달랐으면 좋겠다.
+    //그냥 우리가 할 수 있는 방법은 위의 함수를 그대로 복붙인데 이벤트 객체로 가볍게 만들수 있다.
+
+
+    const handleClick = function(event){//()에 이벤트 매게 변수를 추가한다. 
+      if(event.target.id == "span"){ //(이벤트객체의,타겟이라는속성에,아이디)
+      const span = document.createElement("span") 
+      span.textContent = "span 태그"
+      document.body.append(span)
+
+      }else if(event.target.id == "strong"){ 
+      const span = document.createElement("strong")
+      span.textContent = "strong 태그"
+      document.body.append(span)
+
+      }else if(event.target.id == "mark"){ 
+      const span = document.createElement("mark")
+      span.textContent = "mark 태그"
+      document.body.append(span)
+      } 
+    }
+      //핸들클릭이라는 함수에 한번에 단 만들어져 있는 로직이기 때문에 모든 이벤트에 재사용 가능
+    spanBtn.addEventListener("click", handleClick) //내가 스펜버튼클릭한테 스펜
+    strongBtn.addEventListener("click", handleClick)//낵 스트롱버튼클릭할때 스트롱
+    markBtn.addEventListener("click", handleClick)
+
+
+
+
+    //함수 선언 방식도 사용 가능, 일반적으로 이벤트 핸들러 함수를 만들때는 핸들+이벤트 방식으로 이름을 잘 지음 정해진 규칙은 아님
+    /*function handleClick(){
+      alert("클릭햇어요!")
+    }*/
+
+    //spanBtn.onclick = handleClick 
+    //주의사항 () 붙히지 않는다, ()는 함수에 대한 호출이기 때문에 페이지 열리는 순간 바로실행됨
+    // 내가 원하는건 클릭됐을때 동작하는것이기 때문에
+
+
+  </script>
+  
+</body>
+</html>

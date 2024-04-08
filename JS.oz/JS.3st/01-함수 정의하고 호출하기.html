@@ -7,9 +7,37 @@
   <title>함수 정의하고 호출하기</title>
 </head>
 <body>
-  
+
+  <div id ="container"></div>
+
 
   <script>
+
+    createParagraph()
+    createParagraph()
+    createParagraph()
+
+    function createParagraph(){
+      const p = document.createElement("p")
+      p.textContent = "새롭게 만들어진 ans단 태그!"
+      document.querySelector("#container").append(p)
+    }
+     alert()//호출
+
+    //선언식은 호이스팅 가능: 만드는 부분이 호출부분보다 아래에 있어도됨
+    function sayYes (){
+      console.log(1)
+      condole.log(2)
+      alert("YES!")
+    }
+    alert()
+
+
+    //표현식은 호이스팅 불가
+    const sayNo = function(){
+      alert("no!")
+      console.log(3)
+    }
     
   </script>
 </body>
