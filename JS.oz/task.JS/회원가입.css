@@ -45,6 +45,6 @@ textarea {
   min-height: 100px;
 }
 .buttons {
-  max-resolution: 10px 0 0 0;
+  margin: 10px 0 0 0;
   text-align: center;
 }
