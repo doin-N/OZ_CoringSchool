@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>회원가입 폼</title>
+    <link rel="stylesheet" href="task08.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=" />
+  </head>
+  <body>
+    <div id="container">
+      <p>회원 가입</p>
+      <form id="form">
+        <fieldset>
+          <legend>기본정보</legend>
+          <p>이름 : <input type="text" id="name" name="name" /><br /></p>
+          <p>주민번호 : <input type="text" id="ssn_front" name="jumin" /> -
+            <input type="password" id="ssn_back" name="jumin" />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>가입정보</legend>
+          <tr>
+            <th>아이디 :</th>
+            <th>
+              <input type="text" id="username"/>
+            </th>
+          </tr>
+          <tr>
+            <th>비밀번호 :</th>
+            <th><input type="password" id="username" /></th>
+          </tr>
+          <tr>
+            <th>비밀번호 확인 :</th>
+            <th> <input type="password" id="username" /></th>
+          </tr>
+          <tr>
+            <th>이메일 :</th>
+            <th>
+              <input type="email" id="emailId" /> @
+            </th>
+            <th>
+              <select mame="mailbox">
+                <option value="gmail">gmail.com</option>
+                <option value="naver">naver.com</option>
+                <option value="nate">nate.com</option>
+                <option value="write">직접입력</option>
+              </select>
+            </th>
+          </tr>
+        </fieldset>
+     
+        <fieldset>
+          <legend>기타정보</legend>
+          <tr>
+          <th>주소 : </th>
+          <th> <input id="address" type="text" name="address"> </th>
+        </tr>
+        <tr>
+          <th>성별 :</th>
+          <th> <input id= "gender" type="radio" name="gender" value="male" checked> 남성</th>
+          <th> <input id = "gender" type="radio" name="gender" value="female"> 여성</th>
+        </tr>
+        </fieldset>
+
+      <div>
+        <input type="checkbox" value="동의" id="agree" />개인정보 동의 <br />
+        <input type="submit" value="회원가입" />
+      </div>
+      </form>
+    </div>
+
+    <script src="task08.js"></script>
+  </body>
+</html>
