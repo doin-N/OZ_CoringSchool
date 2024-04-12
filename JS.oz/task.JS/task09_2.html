@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    /* -----------------------------------------------------------------------------*/
+// <요구사항> - console.log()로 결과를 확인하면서 진행해주세요.
+// 1. 본인의 드림카 정보를 담은 객체를 생성해야 합니다.
+// 2. 정보는 brand, model, year 3가지로 작성합니다.
+// 3. 객체리터럴 방식, 생성자 함수 방식을 모두 사용하여 생성해야 합니다.
+// 4. 대괄호 연산자와 마침표 연산자를 사용하여 객체에 접근할 수 있어야 합니다.
+// 5. myDreamCar 메소드는 콘솔창에 `제 드림카는 year년식 brand 회사의 model입니다.` 형식으로 출력되도록 작성해주세요.
+// 6. 스타일은 마음껏 수정해도 좋습니다.
+/* -----------------------------------------------------------------------------*/
+
+// 1. 객체리터럴 방식으로 dreamCar 객체를 생성해주세요
+// 객체리터럴 방식이 뭔지 이해하기 필요할듯 
+// 전체적으로 문제 자체를 이해하는 공부가 필요할듯..
+const dreamCar = {
+  brand : "Renault",
+  model : "QM6",
+  year : "2025"
+};
+
+// 2. 마침표 연산자(dot notation)를 사용하여 dreamCar의 model 값을 출력하세요.
+
+console.log(dreamCar.model); 
+
+// 3. 대괄호 연산자(bracket notation)를 사용하여 dreamCar의 brand 값을 출력하세요.
+//대괄호 사용법 제대로 익히기 (dreamCar[brand])로 썼을때 콘솔 출력안됨
+//이유 : 문자열 처리 안해줘서 "", '', ``이거써야함
+console.log(dreamCar["brand"]); 
+
+// 4. 1번에서 생성한 객체를 생성자 함수를 사용하여 생성하세요.
+function Car(brand, model, year) { // ="" 이내용들 안써도됨 안쓰고 만들면 나중에 객체 생성해서 쓸때 재활용가능
+  this.brand //= "Renault"
+  this.model// = "QM6"
+  this.year// = "2025"
+  // 5.myDreamCar 메소드를 추가해주세요.
+  this.myDreamCar = function(){
+    return `제 드림카는 ${year}년식 ${brand} 회사의 ${model} 입니다.`
+    //리턴 = 해당함수가 호출되면 무조건 리턴값이 반환(리턴)됨
+  }}
+/*
+그니까 순서는
+1. 객체 생성 + 객체안에 값 넣어줌
+2. 객체안의 myDreamCar 함수에서 리턴되는 값이 정의가 됨
+3. dreamCar1.myDreamCar()를 호출하면 미리 정의된 값이 리턴됨
+4. 콘솔로그에서 보여줌
+*/
+// 6. 생성자 함수로 객체 생성
+// 코드는 만들었는데 돌아가는거 이해안됨...
+/* 내가 Car라는 객체를 function으로 생성했고
+그거를 dreamCar1이라는 변수로 생성했고 
+콘솔에 dreamCar1변수안에 있는 myDreamCar를 호출해서 보여달라했음... 
+리턴 어케쓰는겨....리턴이해필요...*/
+const dreamCar1 = new Car("Renault", "QM6", "2025") // ()안에 있는내용이 자동으로 this값에 출력
+console.log(dreamCar1.myDreamCar());
+
+// 마침표 연산자로 메소드 호출하기
+dreamCar1.myDreamCar(); 
+  </script>
+  
+</body>
+</html>

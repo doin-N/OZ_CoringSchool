@@ -4,11 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>빌트인생성자</title>
 </head>
 <body>
+  <p id="now"></p>
   
   <script>
+
+    const p = document.getElementById("now")
+
+    const now = new Date()
+   // const then = new Date(1991, 6, 13, 7, 12, 13) 
+
+    console.log(now)
+    //console.log(then)
+
+    let year = now.getFullYear()
+    let month = now.getMonth() + 1 // month는 0부터 시작하기 때문에 1을 더해줘야함
+    let day = now.getDate()
+    let hour = now.getHours()
+    let min = now.getMinutes()
+    let sec = now.getSeconds()
+
+    p.textContent = `${year}/ ${month}/ ${day}/ ${hour}:${min}:${sec}`
     
   </script>
 </body>
