@@ -6,69 +6,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=" />
+    <link href="task08.css" rel="stylesheet">
   </head>
   <body>
-    <div id="container">
-      <p>회원 가입</p>
-      <form id="form">
-        <fieldset>
-          <legend>기본정보</legend>
-          <p>이름 : <input type="text" id="name" name="name" /><br /></p>
-          <p>주민번호 : <input type="text" id="ssn_front" name="jumin" /> -
-            <input type="password" id="ssn_back" name="jumin" />
-          </p>
-        </fieldset>
-        <fieldset>
-          <legend>가입정보</legend>
-          <tr>
-            <th>아이디 :</th>
-            <th>
-              <input type="text" id="username"/>
-            </th>
-          </tr>
-          <tr>
-            <th>비밀번호 :</th>
-            <th><input type="password" id="username" /></th>
-          </tr>
-          <tr>
-            <th>비밀번호 확인 :</th>
-            <th> <input type="password" id="username" /></th>
-          </tr>
-          <tr>
-            <th>이메일 :</th>
-            <th>
-              <input type="email" id="emailId" /> @
-            </th>
-            <th>
-              <select mame="mailbox">
-                <option value="gmail">gmail.com</option>
-                <option value="naver">naver.com</option>
-                <option value="nate">nate.com</option>
-                <option value="write">직접입력</option>
-              </select>
-            </th>
-          </tr>
-        </fieldset>
-     
-        <fieldset>
-          <legend>기타정보</legend>
-          <tr>
-          <th>주소 : </th>
-          <th> <input id="address" type="text" name="address"> </th>
-        </tr>
-        <tr>
-          <th>성별 :</th>
-          <th> <input id= "gender" type="radio" name="gender" value="male" checked> 남성</th>
-          <th> <input id = "gender" type="radio" name="gender" value="female"> 여성</th>
-        </tr>
-        </fieldset>
+    <h1>회원 가입</h1>
+    <form id="form">
+      <fieldset>
+        <legend>기본정보</legend>
+        <div class="basics flex" >
+          <label for="inputname">이름 : </label>
+          <input type="text" id="inputname" name="name">
+        </div>
+        <div class="jumins flex">
+          <label for = "jumin1">주민번호 : </label>
+          <input type="text" id="jumin1" name="jumin">
+          <label for = "jumin2">-</label>
+          <input type="password" id="jumin2" name="jumin">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>가입정보</legend>
+        <div class="info-id flex">
+          <label for="id">아이디 : </label>
+          <input type="text" id="id" name="userid">
+        </div>
+        <div class="info-password flex">
+          <label for="pw1">비밀번호 : </label>
+          <input type="password" id="pw1" name="pw1">
+        </div>
+        <div class="info-password flex">
+          <label for="pw2">비밀번호 확인 : </label>
+          <input type="password" id="pw2" name="pw2">
+        </div>
+        <div class="info-email flex">
+          <label for="email">이메일 : </label>
+          <input type="text" id="email" name="'email">@
+          <select>
+            <option value="gmail">gmail.com</option>
+            <option value="naver">naver.com</option>
+            <option value="kakao">kakao.com</option>
+            <option value="nate">nate.com</option>
+            <option value="self">직접입력</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>기타정보</legend>
+        <div>
+          <label for="address">주소 : </label>
+          <input type="text" id="address" name="address">
+        </div>
+        <div class="info-gener">
+          <label>성별 : </label>
+          <input type="radio" id="male" name="gender">
+          <label for="male">남성</label>
+          <input type="radio" id="female" name="gender">
+          <label for="female">여성</label>
+        </div>
+         
+      </fieldset>
 
-      <div>
-        <input type="checkbox" value="동의" id="agree" />개인정보 동의 <br />
-        <input type="submit" value="회원가입" />
+      <div class="signup-agree">
+        <input type="checkbox" id="agree" name="agree"/>
+        <label for="agree" >개인정보 동의</label>
       </div>
+        <button type="submit">회원가입</button>
       </form>
-    </div>
 
     <script src="task08.js"></script>
   </body>

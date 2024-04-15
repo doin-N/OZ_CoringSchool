@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="draw">추첨</button>
+  <p id="number"></p>
+
+  <script>
+    const button = document.getElementById("draw")
+    const p = document.getElementById("number")
+
+    console.log(Math.sqrt(4))//제곱근을 구해주는 
+    console.log(Math.sqrt(4))//절대값을 구해주는
+
+    //Math.random()은 0~1사이의 랜덤 숫자를 반환해준다
+
+    let rn = Math.random()
+
+    //근데 정수를 구하고싶다면 
+    //console.log(rn * 10) //정수로 만듬
+    //주어진 숫자에서 소수점 이하를 제거해 반환 floor
+  
+    //console.log(Math.floor(rn * 10)+1) //+1은 0이 안나오게 하고 싶을때
+
+    //이걸 상수화표현하면
+
+    const MAX_NUM = 10
+    const MIN_NUM = 1
+    //console.log(Math.floor(rn * MAX_NUM) + MIN_NUM)
+    
+    //버튼을 누를때마다 나오게 하고싶을때
+    button.addEventListener("click", function(){
+      p.textContent = Math.floor(Math.random() * MAX_NUM) + MIN_NUM
+    })
+
+
+  </script>
+  
+</body>
+</html>

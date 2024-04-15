@@ -1,6 +1,24 @@
 /* CSS를 자유롭게 작성하세요. */
-* {
+body {
+  width: 100%;
   margin: 0;
   box-sizing: border-box;
-  
+  display: flex;
+  flex-direction: column;
+}
+fieldset{
+  margin-bottom: 20px;
+  padding: 10px;
+  min-width: 500px;
+  justify-content: space-around;
+}
+h1{
+  text-align: center;
+}
+.flex {
+  display: flex;
+
+}
+.basics{
+  border: 0;
 }
