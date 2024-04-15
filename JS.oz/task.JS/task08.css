@@ -1,14 +1,23 @@
 /* CSS를 자유롭게 작성하세요. */
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   margin: 0;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+}
+form{
+  border: solid 1px;
+  gap: 50px;
+
+
 }
 fieldset{
   margin-bottom: 20px;
   padding: 10px;
+
   min-width: 500px;
   justify-content: space-around;
 }
@@ -17,8 +26,8 @@ h1{
 }
 .flex {
   display: flex;
-
 }
-.basics{
-  border: 0;
+.basics, .info-id, .info-password {
+  margin:0;
+
 }

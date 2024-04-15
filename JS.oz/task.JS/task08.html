@@ -10,14 +10,14 @@
   </head>
   <body>
     <h1>회원 가입</h1>
-    <form id="form">
+    <form>
       <fieldset>
         <legend>기본정보</legend>
         <div class="basics flex" >
           <label for="inputname">이름 : </label>
           <input type="text" id="inputname" name="name">
         </div>
-        <div class="jumins flex">
+        <div class="jumins basics flex">
           <label for = "jumin1">주민번호 : </label>
           <input type="text" id="jumin1" name="jumin">
           <label for = "jumin2">-</label>
@@ -56,7 +56,7 @@
           <label for="address">주소 : </label>
           <input type="text" id="address" name="address">
         </div>
-        <div class="info-gener">
+        <div class="info-gener flex">
           <label>성별 : </label>
           <input type="radio" id="male" name="gender">
           <label for="male">남성</label>
@@ -66,7 +66,7 @@
          
       </fieldset>
 
-      <div class="signup-agree">
+      <div class="signup-agree flex">
         <input type="checkbox" id="agree" name="agree"/>
         <label for="agree" >개인정보 동의</label>
       </div>
