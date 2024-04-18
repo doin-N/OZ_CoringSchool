@@ -51,7 +51,6 @@ drawButton.addEventListener("click", function(){
 resetButton.addEventListener("click", function(){
   lottoNumbers.splice(0, 6) //0번인덱스에서 부터 6개를 지울것이다.
   numberDiv.innerHTML = "" //4 다시버튼을 누르면 화면에서 숫자 없애기
-
 })
 
 //과제 추첨 버튼을 누른 후 다시 버튼을 누르지 않으 채 추첨 버튼을 또 눌러도 새롭게 번호가 추첨되도록 기능수정

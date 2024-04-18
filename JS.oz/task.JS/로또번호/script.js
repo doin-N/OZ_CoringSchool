@@ -15,25 +15,37 @@
  * - 로또 번호 자동 생성 버튼 클릭 -> 5세트의 로또 번호가 화면에 표시됩니다. 당첨 번호와 일치하는 숫자는 강조됩니다.
  */
 
-// '이번 주 당첨 번호 생성하기' 버튼에 대한 참조를 가져옵니다.
-const generateWinningNumbers = document.getElementById(
-  'generateWinningNumbers'
-);
-// '로또 번호 자동 생성' 버튼에 대한 참조를 가져옵니다.
+
+const generateWinningNumbers = document.getElementById('generateWinningNumbers');
+// 변수 generateWinningNumbers 를 할당한다 어디에? 도큐멘트에 id generateWinningNumbers
 const generateLottoNumbers = document.getElementById('generateLottoNumbers');
-// 당첨 번호를 보여줄 HTML 요소에 대한 참조를 가져옵니다.
+// 변수 generateLottoNumbers 를 할당한다 어디에? 도큐멘트에 id generateLottoNumbers
 const winningNumContainer = document.getElementById('winningNumbers');
-// 자동 생성된 로또 번호를 보여줄 HTML 요소에 대한 참조를 가져옵니다.
+// 변수 winningNumContainer 를 할당한다 어디에? 도큐멘트에 id winningNumContainer
 const lottoNumContainer = document.getElementById('lottoNumbers');
+// 변수 lottoNumContainer 을 할당한다 어디에? 도큐멘트에 id lottoNumbers
+
 
 /**
  * 1부터 45까지의 숫자 중에서 무작위로 6개의 숫자를 선택하여 배열로 반환하는 함수입니다.
  * 중복된 숫자가 없도록 하며, 반환된 배열은 오름차순으로 정렬됩니다.
  */
+
+// 선언식함수 정의하고 호출하기 
 function generateNumbers() {
-
-
+  let ln = [];
+  while(ln.length < 6){
+    let rn = Math.floor(Math.random() * 45) + 1
+    ln.push(rn)
+     
+  }
   
+  // 1. 1~45의 숫자를 만들어야하는데 어떻게 만드나? 변수를 할당해서? 변수에 뭘할당하지? 랜덤숫자! 랜덤숫자는 어떻게 만드나?
+  // 2. 그중에 무작위 6개의 숫자를 배열로 반화해야한다.
+  // 3. 리턴값을 오름차순으로 정렬한다
+
+
+
 
   /* TODO: 
     1. 1부터 45까지의 숫자 중에서 무작위로 6개의 숫자를 선택하여 배열로 반환하는 함수입니다.
@@ -47,7 +59,7 @@ function displayNumbers(numbers, winningNumbers = []) {
     1. 숫자 배열을 받아서 HTML 요소로 변환하여 반환하는 함수입니다.
     2. 각 숫자는 <span> 요소로 감싸지며, 당첨 번호와 일치하는 경우 특별한 스타일이 적용됩니다.
     3. 매개변수에 대한 설명
-      - numbers - 표시할 숫자의 배열
+      - numbers - 표시할  숫자의 배열
       - winningNumbers - 당첨 번호 배열 (선택 사항)
   */
 }
@@ -55,8 +67,8 @@ function displayNumbers(numbers, winningNumbers = []) {
 // 초기 당첨 번호 배열
 let winningNumbers = [];
 
-generateWinningNumbers.addEventListener('click', () => {
-
+generateWinningNumbers.addEventListener('click', () => {//제너레이트 위닝넘버스 버튼을 누를때 마다 이벤트를 생성한다. (당첨번호 버튼)
+  
   /* TODO:
     - '이번 주 당첨 번호 생성하기' 버튼 클릭 시 실행되는 이벤트 핸들러입니다.
     - generateNumbers 함수를 호출하여 당첨 번호를 생성하고, 이를 화면에 표시합니다.
@@ -64,7 +76,7 @@ generateWinningNumbers.addEventListener('click', () => {
   */
 });
 
-generateLottoNumbers.addEventListener('click', () => {
+generateLottoNumbers.addEventListener('click', () => { //제너레이트 로또 넘버 버튼을 누를때 마다 이벤트를 생성한다.
   /* TODO:
     - '로또 번호 자동 생성' 버튼 클릭 시 실행되는 이벤트 핸들러입니다.
     - 당첨 번호가 먼저 생성되어 있는지 확인한 후, 5세트의 로또 번호를 생성하고 화면에 표시합니다.

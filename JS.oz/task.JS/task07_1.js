@@ -8,6 +8,8 @@
 // 6. 스타일은 마음껏 수정해도 좋습니다.
 /* -----------------------------------------------------------------------------*/
 // 트윗 게시 버튼 요소
+
+
 const postTweet = document.querySelector('#postTweet');
 postTweet.addEventListener('click', function () {
   // 트윗을 입력할 input 요소

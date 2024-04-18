@@ -11,6 +11,13 @@
   <!--
   localStoage 속성은 현제 도메인의 로컬 저장소에 접근 할수 있게 해준다
   각 도메인에 할당해주는 저장공간으로 영구적으로 데이터 보관을 할수있다.
+  중복된 이름을 쓸수 없다.
+  
+  setItem("key","value") 키와 밸류를 전달 받아 저장
+  getItem("kye") 전달받은 키에 해당하는 밸류를 반환
+  removeItem("key") 전달받은 키에 해당하는 데이터를 삭제
+  clear() 모든 데이터 삭제
+
   -->
 
   <p id="item">이봉주</p>
@@ -18,16 +25,32 @@
   <button id="get">GET</button>
   <button id="remove">REMOVE</button>
   <button id="clear">CLEAR</button>
-
+ 
   <script>
     
     const item = document.getElementById("item")
     document.getElementById("set").addEventListener("click", function(){
+      //셋 아이디를 선택한뒤.에드이벤트 리스터로 클릭 에빈트 설정
       localStorage.setItem("마라토너", item.textContent)
+    //로컬스토리지에 셋아이템("키 (데이터이름)", 실제값은 p태그에 쓰여있는거)에 키값설정하고 피테크의 실제 쓰여있는 내용을 값으로 쓰겠다.
     })
     document.getElementById("get").addEventListener("click", function(){
-      localStorage.setItem("마라토너", item.textContent)
+      alert(localStorage.getItem("마라토너") )
+      //난 로컬스트레지부터 마라토너라는 이름의 데이터를 가져올께
     })
+    document.getElementById("remove").addEventListener("click", function(){
+      localStorage.removeItem("마라토너")
+    })
+    document.getElementById("clear").addEventListener("click", function(){
+      localStorage.clear("마라토너")
+    })
+
+    //보너스 localStorage 는 문자열만 저장된다.
+    //localstorage.setItem("커피", JSON.stringify){
+      //name : "에디오피아",
+      //tasth : "산미"
+    //}
+
 
   </script>
   
