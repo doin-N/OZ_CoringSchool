@@ -32,12 +32,22 @@ const lottoNumContainer = document.getElementById('lottoNumbers');
  */
 
 // 선언식함수 정의하고 호출하기 
-function generateNumbers() {
-  let ln = [];
-  while(ln.length < 6){
+/*function generateNumbers() {
+  let ln = [6];
+
+  /*for (i=0; i <=6; i++){
     let rn = Math.floor(Math.random() * 45) + 1
-    ln.push(rn)
-     
+    //ln[i].push(rn)
+    ln[i] = rn
+    //console.log(ln)
+
+    int i=0;
+    let ln = [6];
+    while( i <ln.length ){
+      let rn = Math.floor(Math.random() * 45) + 1
+    //ln[i].push(rn)
+    ln[i] = rn
+    }
   }
   
   // 1. 1~45의 숫자를 만들어야하는데 어떻게 만드나? 변수를 할당해서? 변수에 뭘할당하지? 랜덤숫자! 랜덤숫자는 어떻게 만드나?
@@ -52,7 +62,7 @@ function generateNumbers() {
     2. 중복된 숫자가 없어야 합니다.
     3. 배열은 오름차순으로 정렬하여 return합니다. 
   */
-}
+
 
 function displayNumbers(numbers, winningNumbers = []) {
   /* TODO:
