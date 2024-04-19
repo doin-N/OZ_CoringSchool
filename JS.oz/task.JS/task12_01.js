@@ -20,8 +20,11 @@ const users = [
 3. 필터링한 나이를 25세 이상 35세 미만의 사용자만 남게 하기
 */ 
  const usersAge = 
- users.filter = (value => value.age == 25 <= 35)
- console.log(usersAge) // (value) => valu.age == 25 =< 35
+ users.filter ((value) => value.age >= 25 && value.age < 35)
+ console.log(usersAge) 
+ // 그리고 유저필터에서 필터링된 값만 userAge에 할당하다 
+ // (그걸 value로 반환(==>)25세이상 35세 미만 조건을 각각 만들어 && 두조건이 맞으면 그걸)
+
 /*
  오류가남 잘못된 비교연산자 사용 
  각개체의 나이속성을 확인하게 만들어야함 
