@@ -30,10 +30,11 @@ const users = [
 // 필터링된 사용자 중에서 이메일 주소가 gmail.com 도메인을 사용하는 사용자만을 추출하여 새로운 배열 생성하세요
 // 여기에 코드를 작성하세요
 const userEmail =
-usersAge.filter((em) => {return em.email.length})
+usersAge.filter((em) => em.email.length)
 console.log(userEmail) 
-// 콘솔 내용 나이로 필터링된 4개의 요소 다뜸
-// 근데 리턴값이 아닌 새 배열로 값을 필터링해야함으로 틀림 
+//리턴을 빼도 콘솔 내용 나이에서 필터링한 값 다나옴 
+//문자열길이를 검색해야 할것이 아니기 때문에 length가 아닌듯
+//구글링 ㄱㄱ
 
 
 // 결과를 화면에 그리는 함수
