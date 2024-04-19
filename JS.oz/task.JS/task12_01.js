@@ -21,25 +21,27 @@ const users = [
 2. 나이만 필터링 한다.
 3. 필터링한 나이를 25세 이상 35세 미만의 사용자만 남게 하기
 */ 
- const usersAge = 
+ const filteredUsers = 
  users.filter ((value) => value.age >= 25 && value.age < 35);
  // 그리고 유저필터에서 필터링된 값만 userAge에 할당하다 
  // (그걸 value로 반환(==>)25세이상 35세 미만 조건을 각각 만들어 && 두조건이 맞으면 그걸)
 
 // 필터링된 사용자 중에서 이메일 주소가 gmail.com 도메인을 사용하는 사용자만을 추출하여 새로운 배열 생성하세요
 // 여기에 코드를 작성하세요
-const userEmail =
-usersAge.filter((em) => em.email.includes('gmail.com'));
-console.log(userEmail) 
+const gmailUsers =
+filteredUsers.filter((em) => em.email.includes('gmail.com'));
 // 문자열의 특정요소나 문자열이 포함되어있는지 확인하는 메서드 includes를 사용
 // 결과 요소(2)개 찾음 엘리스 스티브
 
 // 결과를 화면에 그리는 함수
 function renderUserData(userData) {
   const userDataDiv = document.getElementById('userData');
+  userDataDiv.innerHTML = userData
 
   // innerHTML을 사용해 결과를 화면에 그려보세요
   // 여기에 코드를 작성하세요
+  
+
 }
 
 renderUserData(gmailUsers); // 사용자 데이터를 그리는 함수 실행
