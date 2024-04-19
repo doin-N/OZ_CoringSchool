@@ -14,6 +14,20 @@ const users = [
   { name: 'Steve', age: 32, email: 'steve@gmail.com' },
 ];
 
+/*
+1. 새로운 배열을 만든다
+2. 나이만 필터링 한다.
+3. 필터링한 나이를 25세 이상 35세 미만의 사용자만 남게 하기
+*/ 
+ const usersAge = 
+ users.filter = (value => value.age == 25 <= 35)
+ console.log(usersAge) // (value) => valu.age == 25 =< 35
+/*
+ 오류가남 잘못된 비교연산자 사용 
+ 각개체의 나이속성을 확인하게 만들어야함 
+ */ 
+
+
 // 25세 이상 35세 미만인 사용자만을 필터링하여 새로운 배열 생성하세요
 // 여기에 코드를 작성하세요
 
