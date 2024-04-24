@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth; /*스크롤을 부드럽게 움직이게 하는것*/
+}
+html, body{
+  margin: 0;
+}
+#container{
+  width: 100%;
+  max-width: 640px;/* 아무리커져도 640이상 안커짐좋겠다*/
+  margin: auto;
+}
+header{
+  width: 100%; /*컨테이너의 자식이라 부모랑 맞춤*/
+  max-width: 640px; /*컨테이너의 자식이라 부모랑 맞춤*/
+  height: 60px;
+  border-bottom: 1px solid #00000033;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around; /*양끝에 간격을 두고 정렬*/
+  align-items: center; /* 수직방향에서 가운데정렬 (세로에서)*/
+  position: fixed; 
+  top: 0; /*스크롤이 올라가도 헤더는 멈춰있게*/
+}
+.header__search{/* 검색 필터링 버튼 부분*/
+  display: flex;/*양옆으로 붙게하기*/
+  align-items: center;
+}
+input, button, select{
+  height: 30px;
+  border: 0.5px solid gray;
+}
+main{
+  display: flex;
+  justify-content: space-evenly; /*레이아웃안에서 모든 요소가 동일한 여백을가지고 배치가 되는데 justify-self : space-evenly 확인요망*/ 
+  flex-wrap: wrap; /* 여러줄로 */
+  margin-top: 60px;
+}
+img{ /*메인 안에 있는 이미지의 사이즈*/
+  width: 200px;
+  height: 200px;
+}
+.more, .tothetop{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* 버튼 모양 원형으로 만들어줌*/
+  display: flex; /* 텍스트 모어하고 탑이 가운데 정렬 될수있게 플렉스 센터센터*/
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* 버튼의 위치 스크롤이 움직여도 고정되게 그위치를 각각 레프트,바텀 라이트,바텀으로 설정*/
+  cursor: pointer;
+}
+.more{
+  color: #ffffff;
+  background-color: #cd8f6d;
+  left: 100px;
+  bottom: 100px;
+}
+.tothetop{
+  color: #ffffff;
+  background-color: #ab4a12;
+  right: 100px;
+  bottom: 100px;
+}

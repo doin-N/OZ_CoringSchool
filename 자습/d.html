@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+/* const quiz5 = (arr) => {
+  num_list.length 
+
+}*/
+const quiz5 = (arr) => {
+  const length = arr.length
+  const 마지막배열값 = arr[length-1]
+  const 마지막두번째값 = arr[length -2]
+  console.log('마지막배열값 : ', 마지막배열값)
+  console.log('마지막두번째값 : ', 마지막두번째값)
+  //마지막 원소가 그전 원소보다 크면 마지막 원소에서 그전 원소를 뺀 값
+
+  // 마지막 원소가 그전 원소보다 크지 않다면 마지막 원소를 두 배한 값을 (추가하기때문에 푸시)
+  if(마지막원소 > 마지막두번째값) {
+    arr.push(마지막배열값 - 마지막두번째값 )
+  }else {
+    arr.push(마지막배열값 *2)
+  }
+
+}
+//[2,1,6]
+const num_list = [2, 1, 6]
+console.log(quiz5())
+</script>
+  
+</body>
+</html>
