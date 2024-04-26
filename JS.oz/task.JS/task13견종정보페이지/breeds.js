@@ -38,6 +38,7 @@ window.addEventListener("load", function(){
   request1.open("get", apiRandomDogs)
   request1.addEventListener("load", function(){
     const response = JSON.parse(request1.response)
+    console.log(response)
     //서버로 부터 받은 정보가 리스폰즈에 저장됨
     response.message.forEach(function(item){
       currentDogs.push(item)
@@ -119,6 +120,12 @@ tothetop.addEventListener("click", function(){
 
 /*
 과제 부분
+*/
+/* 과제
+- 견종 고르는 셀렉트 옆에다 버튼을 하나 추가한다
+- 버튼에는 리셋이라고 쓴다
+- 해당 버튼을 누르면 강아지 42마리의 소스를 새롭게 요청해 받아온다
+- 기존에 뿌려져 있던 강아지는 모두 사라지고, 새로운 강아지 42마리로 채운다
 */
 const reset = document.getElementById("reset-button")
 

@@ -52,3 +52,19 @@ function renderUserData(userData) {
 }
 
 renderUserData(gmailUsers); // 사용자 데이터를 그리는 함수 실행
+
+/*
+//민주님
+function renderUserData(userData) {
+  const userDataDiv = document.getElementById('userData');
+  userDataDiv.innerHTML
+  = userData.map(function (item) {
+  `<div class="user">
+    <p><strong> Name: </strong>${user.name}</p>
+    <p><strong> Age: </strong>${user.age}</p>
+    <p><strong> Email: </strong>${user.email}</p>
+  </div>
+  `
+})
+}
+*/
